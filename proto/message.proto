@@ -1,0 +1,23 @@
+syntax = "proto2";
+
+package messaging;
+message Point {
+  required float x = 1;
+  required float y = 2;
+}
+message Line {
+  required Point fr = 1;
+  required Point to = 2;
+}
+
+message Structure {
+    required float id = 1;
+    required string text = 2;
+}
+message Message {
+  required float score = 1;
+  repeated Point dots = 2;
+  repeated Line lines = 3;
+  required Structure struct = 4;
+  required string description = 5;
+}
